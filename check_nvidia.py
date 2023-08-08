@@ -10,6 +10,8 @@ def check():
     device_count = pynvml.nvmlDeviceGetCount()
     print(f"Device Count: {device_count}")
 
+    devices = []
+
     for i in range(device_count):
         handle = pynvml.nvmlDeviceGetHandleByIndex(i)
         # print("Handle:", handle)
@@ -31,6 +33,26 @@ def check():
         print(f"    - Free Memory : {mem_free:.1f} GB ({free_ratio:.1f}%)")
         print(f"    - Used Memory : {mem_used:.1f} GB ({used_ratio:.1f}%)")
 
+        devices.append(
+            dict(
+                index=i,
+                uuid=uuid,
+                name=device_name,
+                total=mem_total,
+                used=mem_used,
+                free=mem_free,
+                free_ratio=free_ratio,
+                used_ratio=used_ratio,
+            )
+        )
+
+    return dict(
+        driver_version=driver_version,
+        device_count=device_count,
+        devices=devices,
+    )
+
 
 if __name__ == "__main__":
-    check()
+    info = check()
+    print(info)
