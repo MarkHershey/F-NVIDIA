@@ -2,13 +2,13 @@
 
 ## NVIDIA GPU Hardware/Software Stack
 
-| Layer    | Item                            | Remarks                                      |
-| -------- | ------------------------------- | -------------------------------------------- |
-| Software | PyTorch, TensorFlow, etc.       | Multiple versions can be installed, isolated |
-| Software | cuDNN                           | Multiple versions can be installed, isolated |
-| Software | CUDA Toolkit (e.g. 11.8.0)      | Multiple versions can be installed, isolated |
-| Driver   | NVIDIA Driver (e.g. 535.154.05) | Single System-wide driver                    |
-| Hardware | NVIDIA GPU                      |                                              |
+| Layer              | Item                            | Remarks                                      |
+| ------------------ | ------------------------------- | -------------------------------------------- |
+| Software           | PyTorch, TensorFlow, etc.       | Multiple versions can be installed, isolated |
+| Software           | cuDNN                           | Multiple versions can be installed, isolated |
+| Low-level Software | CUDA Toolkit (e.g. 11.8.0)      | Multiple versions can be installed, isolated |
+| Driver             | NVIDIA Driver (e.g. 535.154.05) | Single System-wide driver                    |
+| Hardware           | NVIDIA GPU                      |                                              |
 
 ## Some weird stuff I found out about NVIDIA GPUs / CUDA
 

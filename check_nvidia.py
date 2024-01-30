@@ -5,7 +5,7 @@ def check():
     pynvml.nvmlInit()
 
     driver_version = pynvml.nvmlSystemGetDriverVersion()
-    print(f"Driver Version: {driver_version}")
+    print(f"NVIDIA Driver Version: {driver_version}")
 
     device_count = pynvml.nvmlDeviceGetCount()
     print(f"Device Count: {device_count}")
@@ -55,4 +55,4 @@ def check():
 
 if __name__ == "__main__":
     info = check()
-    print(info)
+    # print(info)
